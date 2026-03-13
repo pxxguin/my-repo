@@ -1,0 +1,14 @@
+name: Manual
+on: # 수동 실행 이벤트
+  workflow_dispatch: # 수동 실행 이벤트
+    inputs:
+      greeting:
+        type: string
+        default: Hello
+        required: true
+        description: A cheerful word
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{inputs.greeting}}"
