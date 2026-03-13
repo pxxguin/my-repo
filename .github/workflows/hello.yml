@@ -1,8 +1,7 @@
-name: Hello # 워크플로 이름
-on: push # 푸시 이벤트가 발생할 때마다 워크플로 실행
-jobs: # 해야할 일 정의
-  hello: # 일의 ID
-    runs-on: ubuntu-latest # 워크플로가 실행될 환경
-    steps: # 일의 단계 정의
-      - run: echo "Hello, World!" # 명령어 실행
-      - uses: actions/checkout@v4 # 액션 호출
+name: Hello
+on: push
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, World!"
